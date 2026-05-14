@@ -1,7 +1,6 @@
 <?php
 /**
  * Plugin Name:       PAY.nl Simple Donations
- * Plugin URI:        https://elisia-europe.org
  * Description:       Simple, fast donation form integrated with PAY.nl API (v1). Preset amounts + custom amount, one-step checkout. Confirmation emails + customizable form description.
  * Version:           1.1.0
  * Requires at least: 5.8
@@ -214,7 +213,7 @@ class PayNL_Simple_Donations {
 					<tr>
 						<th><label>Privacy policy URL</label></th>
 						<td>
-							<input type="url" name="paynl_privacy_url" value="<?php echo esc_attr( get_option( 'paynl_privacy_url' ) ); ?>" class="regular-text" placeholder="https://elisia-europe.org/privacy">
+							<input type="url" name="paynl_privacy_url" value="<?php echo esc_attr( get_option( 'paynl_privacy_url' ) ); ?>" class="regular-text" placeholder="https://your-site.com/privacy">
 							<p class="description">If set, a small "Privacy policy" link appears under the donation button.</p>
 						</td>
 					</tr>
@@ -229,26 +228,26 @@ class PayNL_Simple_Donations {
 					</tr>
 					<tr>
 						<th><label>From name</label></th>
-						<td><input type="text" name="paynl_email_from_name" value="<?php echo esc_attr( get_option( 'paynl_email_from_name', get_bloginfo( 'name' ) ) ); ?>" class="regular-text" placeholder="Elisia Europe"></td>
+						<td><input type="text" name="paynl_email_from_name" value="<?php echo esc_attr( get_option( 'paynl_email_from_name', get_bloginfo( 'name' ) ) ); ?>" class="regular-text" placeholder="Your Organisation"></td>
 					</tr>
 					<tr>
 						<th><label>From address</label></th>
 						<td>
-							<input type="email" name="paynl_email_from_address" value="<?php echo esc_attr( get_option( 'paynl_email_from_address', get_option( 'admin_email' ) ) ); ?>" class="regular-text" placeholder="no-reply@elisia-europe.org">
+							<input type="email" name="paynl_email_from_address" value="<?php echo esc_attr( get_option( 'paynl_email_from_address', get_option( 'admin_email' ) ) ); ?>" class="regular-text" placeholder="no-reply@your-site.com">
 							<p class="description">Must be on a domain you own. Otherwise emails go to spam.</p>
 						</td>
 					</tr>
 					<tr>
 						<th><label>Reply-To address</label></th>
 						<td>
-							<input type="email" name="paynl_email_reply_to" value="<?php echo esc_attr( get_option( 'paynl_email_reply_to' ) ); ?>" class="regular-text" placeholder="contact@elisia-europe.org">
+							<input type="email" name="paynl_email_reply_to" value="<?php echo esc_attr( get_option( 'paynl_email_reply_to' ) ); ?>" class="regular-text" placeholder="contact@your-site.com">
 							<p class="description">Optional. Donors will reply here instead of the From address.</p>
 						</td>
 					</tr>
 					<tr>
 						<th><label>BCC admin</label></th>
 						<td>
-							<input type="email" name="paynl_email_admin_bcc" value="<?php echo esc_attr( get_option( 'paynl_email_admin_bcc' ) ); ?>" class="regular-text" placeholder="admin@elisia-europe.org">
+							<input type="email" name="paynl_email_admin_bcc" value="<?php echo esc_attr( get_option( 'paynl_email_admin_bcc' ) ); ?>" class="regular-text" placeholder="admin@your-site.com">
 							<p class="description">Optional. Sends a hidden copy of each receipt to the ONG so you see every donation in your inbox.</p>
 						</td>
 					</tr>
