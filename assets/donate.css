@@ -1,0 +1,197 @@
+/* PAY.nl Simple Donations — frontend form styling */
+
+.paynl-donate-wrap {
+	max-width: 480px;
+	margin: 1.5rem auto;
+	font-family: inherit;
+	color: inherit;
+	-webkit-font-smoothing: antialiased;
+}
+
+.paynl-donate-title {
+	font-size: 1.4rem;
+	font-weight: 600;
+	margin: 0 0 1rem;
+	text-align: center;
+}
+
+.paynl-donate-form {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.paynl-amounts {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(96px, 1fr));
+	gap: 0.5rem;
+}
+
+.paynl-amt-btn {
+	appearance: none;
+	background: #fff;
+	border: 1.5px solid #d8d4ce;
+	border-radius: 10px;
+	padding: 0.85rem 0.5rem;
+	font-size: 1.05rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: border-color .15s ease, background .15s ease, transform .08s ease;
+	color: inherit;
+	min-height: 52px;
+}
+
+.paynl-amt-btn:hover {
+	border-color: #6b5b4b;
+}
+
+.paynl-amt-btn.is-selected {
+	background: #2a2a2a;
+	color: #fff;
+	border-color: #2a2a2a;
+}
+
+.paynl-amt-btn:active {
+	transform: translateY(1px);
+}
+
+.paynl-custom-wrap[hidden] {
+	display: none !important;
+}
+
+.paynl-field,
+.paynl-custom-wrap {
+	display: flex;
+	flex-direction: column;
+	gap: 0.35rem;
+}
+
+.paynl-label {
+	font-size: 0.875rem;
+	font-weight: 500;
+	color: #4a4a4a;
+}
+
+.paynl-hint {
+	font-weight: 400;
+	color: #8a8a8a;
+	font-size: 0.8rem;
+}
+
+.paynl-input-prefix {
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+.paynl-input-prefix .paynl-prefix {
+	position: absolute;
+	left: 12px;
+	color: #6a6a6a;
+	font-weight: 500;
+	pointer-events: none;
+}
+
+.paynl-input-prefix input {
+	padding-left: 28px !important;
+}
+
+.paynl-donate-form input[type="text"],
+.paynl-donate-form input[type="email"],
+.paynl-donate-form input[type="number"] {
+	width: 100%;
+	padding: 0.75rem 0.85rem;
+	border: 1.5px solid #d8d4ce;
+	border-radius: 10px;
+	font-size: 1rem;
+	background: #fff;
+	color: inherit;
+	font-family: inherit;
+	transition: border-color .15s ease;
+	box-sizing: border-box;
+}
+
+.paynl-donate-form input:focus {
+	outline: none;
+	border-color: #2a2a2a;
+}
+
+.paynl-submit {
+	appearance: none;
+	background: #2a2a2a;
+	color: #fff;
+	border: none;
+	border-radius: 10px;
+	padding: 0.95rem 1.25rem;
+	font-size: 1.05rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background .15s ease, transform .08s ease;
+	margin-top: 0.25rem;
+}
+
+.paynl-submit:hover { background: #000; }
+.paynl-submit:active { transform: translateY(1px); }
+
+.paynl-submit:disabled {
+	opacity: 0.7;
+	cursor: progress;
+}
+
+.paynl-error {
+	background: #fef0f0;
+	border: 1px solid #f5c6c6;
+	color: #9b2c2c;
+	padding: 0.7rem 0.85rem;
+	border-radius: 8px;
+	font-size: 0.9rem;
+}
+
+.paynl-error[hidden] { display: none !important; }
+
+/* Form description (optional cause/explanation block above the form) */
+.paynl-form-description {
+	background: #f7f5f0;
+	border-radius: 10px;
+	padding: 1rem 1.25rem;
+	margin-bottom: 1.25rem;
+	font-size: 0.97rem;
+	line-height: 1.55;
+	color: #3a3a3a;
+}
+
+.paynl-form-description p {
+	margin: 0 0 0.6rem;
+}
+
+.paynl-form-description p:last-child {
+	margin-bottom: 0;
+}
+
+.paynl-form-description a {
+	color: #2a2a2a;
+	text-decoration: underline;
+}
+
+/* Small privacy notice under the submit button */
+.paynl-privacy {
+	font-size: 0.78rem;
+	color: #8a8a8a;
+	text-align: center;
+	margin: 0.5rem 0 0;
+}
+
+.paynl-privacy a {
+	color: #6a6a6a;
+	text-decoration: underline;
+}
+
+/* Number input — remove spinner for cleaner look */
+.paynl-donate-form input[type="number"]::-webkit-outer-spin-button,
+.paynl-donate-form input[type="number"]::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+.paynl-donate-form input[type="number"] {
+	-moz-appearance: textfield;
+}
